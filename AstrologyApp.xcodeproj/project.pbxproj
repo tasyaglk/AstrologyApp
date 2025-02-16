@@ -8,13 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		006C92C22D629F84008F9D1C /* AstrologyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92C12D629F84008F9D1C /* AstrologyAppApp.swift */; };
-		006C92C42D629F84008F9D1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92C32D629F84008F9D1C /* ContentView.swift */; };
-		006C92C62D629F84008F9D1C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92C52D629F84008F9D1C /* Item.swift */; };
 		006C92C82D629F85008F9D1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006C92C72D629F85008F9D1C /* Assets.xcassets */; };
 		006C92CB2D629F85008F9D1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006C92CA2D629F85008F9D1C /* Preview Assets.xcassets */; };
 		006C92D52D629F85008F9D1C /* AstrologyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92D42D629F85008F9D1C /* AstrologyAppTests.swift */; };
 		006C92DF2D629F85008F9D1C /* AstrologyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92DE2D629F85008F9D1C /* AstrologyAppUITests.swift */; };
 		006C92E12D629F85008F9D1C /* AstrologyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92E02D629F85008F9D1C /* AstrologyAppUITestsLaunchTests.swift */; };
+		006C92F12D62A196008F9D1C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92F02D62A196008F9D1C /* TabBarView.swift */; };
+		006C92F32D62A1AF008F9D1C /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92F22D62A1AF008F9D1C /* TabBarViewModel.swift */; };
+		006C92F52D62A213008F9D1C /* AnotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92F42D62A213008F9D1C /* AnotherView.swift */; };
+		006C92F72D62A28B008F9D1C /* CompatabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92F62D62A28B008F9D1C /* CompatabilityView.swift */; };
+		006C93022D62A48C008F9D1C /* SpaceGrotesk-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 006C92FC2D62A48C008F9D1C /* SpaceGrotesk-SemiBold.ttf */; };
+		006C93032D62A48C008F9D1C /* SpaceGrotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 006C92FD2D62A48C008F9D1C /* SpaceGrotesk-Light.ttf */; };
+		006C93042D62A48C008F9D1C /* SpaceGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 006C92FE2D62A48C008F9D1C /* SpaceGrotesk-Regular.ttf */; };
+		006C93052D62A48C008F9D1C /* SpaceGrotesk-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 006C92FF2D62A48C008F9D1C /* SpaceGrotesk-VariableFont_wght.ttf */; };
+		006C93062D62A48C008F9D1C /* SpaceGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 006C93002D62A48C008F9D1C /* SpaceGrotesk-Bold.ttf */; };
+		006C93072D62A48C008F9D1C /* SpaceGrotesk-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 006C93012D62A48C008F9D1C /* SpaceGrotesk-Medium.ttf */; };
+		006C930A2D62A516008F9D1C /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C93092D62A516008F9D1C /* CustomFonts.swift */; };
+		006C930C2D62A57D008F9D1C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C930B2D62A57D008F9D1C /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +47,6 @@
 /* Begin PBXFileReference section */
 		006C92BE2D629F84008F9D1C /* AstrologyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstrologyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006C92C12D629F84008F9D1C /* AstrologyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologyAppApp.swift; sourceTree = "<group>"; };
-		006C92C32D629F84008F9D1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		006C92C52D629F84008F9D1C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		006C92C72D629F85008F9D1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		006C92CA2D629F85008F9D1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		006C92D02D629F85008F9D1C /* AstrologyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstrologyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +54,19 @@
 		006C92DA2D629F85008F9D1C /* AstrologyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstrologyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		006C92DE2D629F85008F9D1C /* AstrologyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologyAppUITests.swift; sourceTree = "<group>"; };
 		006C92E02D629F85008F9D1C /* AstrologyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		006C92F02D62A196008F9D1C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		006C92F22D62A1AF008F9D1C /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		006C92F42D62A213008F9D1C /* AnotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherView.swift; sourceTree = "<group>"; };
+		006C92F62D62A28B008F9D1C /* CompatabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatabilityView.swift; sourceTree = "<group>"; };
+		006C92F82D62A38F008F9D1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		006C92FC2D62A48C008F9D1C /* SpaceGrotesk-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-SemiBold.ttf"; sourceTree = "<group>"; };
+		006C92FD2D62A48C008F9D1C /* SpaceGrotesk-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Light.ttf"; sourceTree = "<group>"; };
+		006C92FE2D62A48C008F9D1C /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; };
+		006C92FF2D62A48C008F9D1C /* SpaceGrotesk-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		006C93002D62A48C008F9D1C /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; };
+		006C93012D62A48C008F9D1C /* SpaceGrotesk-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Medium.ttf"; sourceTree = "<group>"; };
+		006C93092D62A516008F9D1C /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
+		006C930B2D62A57D008F9D1C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +117,12 @@
 		006C92C02D629F84008F9D1C /* AstrologyApp */ = {
 			isa = PBXGroup;
 			children = (
+				006C92FB2D62A3DE008F9D1C /* Utilities */,
+				006C92F82D62A38F008F9D1C /* Info.plist */,
+				006C92EF2D62A18C008F9D1C /* Model */,
+				006C92EE2D62A184008F9D1C /* ViewModel */,
+				006C92ED2D62A174008F9D1C /* View */,
 				006C92C12D629F84008F9D1C /* AstrologyAppApp.swift */,
-				006C92C32D629F84008F9D1C /* ContentView.swift */,
-				006C92C52D629F84008F9D1C /* Item.swift */,
 				006C92C72D629F85008F9D1C /* Assets.xcassets */,
 				006C92C92D629F85008F9D1C /* Preview Content */,
 			);
@@ -128,6 +152,54 @@
 				006C92E02D629F85008F9D1C /* AstrologyAppUITestsLaunchTests.swift */,
 			);
 			path = AstrologyAppUITests;
+			sourceTree = "<group>";
+		};
+		006C92ED2D62A174008F9D1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				006C92F02D62A196008F9D1C /* TabBarView.swift */,
+				006C92F42D62A213008F9D1C /* AnotherView.swift */,
+				006C92F62D62A28B008F9D1C /* CompatabilityView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		006C92EE2D62A184008F9D1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				006C92F22D62A1AF008F9D1C /* TabBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		006C92EF2D62A18C008F9D1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		006C92FB2D62A3DE008F9D1C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				006C93082D62A507008F9D1C /* Fonts */,
+				006C93092D62A516008F9D1C /* CustomFonts.swift */,
+				006C930B2D62A57D008F9D1C /* ColorExtension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		006C93082D62A507008F9D1C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				006C93002D62A48C008F9D1C /* SpaceGrotesk-Bold.ttf */,
+				006C92FD2D62A48C008F9D1C /* SpaceGrotesk-Light.ttf */,
+				006C93012D62A48C008F9D1C /* SpaceGrotesk-Medium.ttf */,
+				006C92FE2D62A48C008F9D1C /* SpaceGrotesk-Regular.ttf */,
+				006C92FC2D62A48C008F9D1C /* SpaceGrotesk-SemiBold.ttf */,
+				006C92FF2D62A48C008F9D1C /* SpaceGrotesk-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +308,12 @@
 			files = (
 				006C92CB2D629F85008F9D1C /* Preview Assets.xcassets in Resources */,
 				006C92C82D629F85008F9D1C /* Assets.xcassets in Resources */,
+				006C93032D62A48C008F9D1C /* SpaceGrotesk-Light.ttf in Resources */,
+				006C93022D62A48C008F9D1C /* SpaceGrotesk-SemiBold.ttf in Resources */,
+				006C93072D62A48C008F9D1C /* SpaceGrotesk-Medium.ttf in Resources */,
+				006C93052D62A48C008F9D1C /* SpaceGrotesk-VariableFont_wght.ttf in Resources */,
+				006C93042D62A48C008F9D1C /* SpaceGrotesk-Regular.ttf in Resources */,
+				006C93062D62A48C008F9D1C /* SpaceGrotesk-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +338,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				006C92C42D629F84008F9D1C /* ContentView.swift in Sources */,
-				006C92C62D629F84008F9D1C /* Item.swift in Sources */,
+				006C92F72D62A28B008F9D1C /* CompatabilityView.swift in Sources */,
+				006C92F52D62A213008F9D1C /* AnotherView.swift in Sources */,
+				006C92F12D62A196008F9D1C /* TabBarView.swift in Sources */,
+				006C930A2D62A516008F9D1C /* CustomFonts.swift in Sources */,
+				006C92F32D62A1AF008F9D1C /* TabBarViewModel.swift in Sources */,
+				006C930C2D62A57D008F9D1C /* ColorExtension.swift in Sources */,
 				006C92C22D629F84008F9D1C /* AstrologyAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +510,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AstrologyApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstrologyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -456,6 +539,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AstrologyApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstrologyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
