@@ -26,7 +26,7 @@ struct TabBarView: View {
                     .tag(1)
                     
                     NavigationStack {
-                        CompatabilityView(/*isTabBarHidden: $viewModel.isTabBarHidden*/)
+                        CompatabilityView()
                     }
                     .tag(2)
                     
@@ -49,7 +49,7 @@ struct TabBarView: View {
         }
     }
     
-    private var tabBar: some View{
+    private var tabBar: some View {
         HStack {
             VStack {
                 Image(.today)
@@ -108,10 +108,17 @@ struct TabBarView: View {
             }
             .frame(width: 93)
         }
-        .padding(.vertical, 12)
-        .padding(.horizontal, 30)
-        .padding(.bottom, 34)
+        .frame(height: 75)
+        .padding(.bottom, 14)
         .background(Color.blackColor)
+        .clipShape(
+            UnevenRoundedRectangle(
+                topLeadingRadius: 12,
+                bottomLeadingRadius: 0,
+                bottomTrailingRadius: 0,
+                topTrailingRadius: 12
+            )
+        )
     }
 }
 

@@ -25,6 +25,8 @@
 		006C93072D62A48C008F9D1C /* SpaceGrotesk-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 006C93012D62A48C008F9D1C /* SpaceGrotesk-Medium.ttf */; };
 		006C930A2D62A516008F9D1C /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C93092D62A516008F9D1C /* CustomFonts.swift */; };
 		006C930C2D62A57D008F9D1C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C930B2D62A57D008F9D1C /* ColorExtension.swift */; };
+		006C930E2D633DDE008F9D1C /* CompatabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C930D2D633DDE008F9D1C /* CompatabilityViewModel.swift */; };
+		006C93112D634ECF008F9D1C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C93102D634ECF008F9D1C /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		006C93012D62A48C008F9D1C /* SpaceGrotesk-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Medium.ttf"; sourceTree = "<group>"; };
 		006C93092D62A516008F9D1C /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		006C930B2D62A57D008F9D1C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		006C930D2D633DDE008F9D1C /* CompatabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatabilityViewModel.swift; sourceTree = "<group>"; };
+		006C93102D634ECF008F9D1C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 		006C92ED2D62A174008F9D1C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				006C930F2D634EC5008F9D1C /* Common */,
 				006C92F02D62A196008F9D1C /* TabBarView.swift */,
 				006C92F42D62A213008F9D1C /* AnotherView.swift */,
 				006C92F62D62A28B008F9D1C /* CompatabilityView.swift */,
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				006C92F22D62A1AF008F9D1C /* TabBarViewModel.swift */,
+				006C930D2D633DDE008F9D1C /* CompatabilityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -200,6 +206,14 @@
 				006C92FF2D62A48C008F9D1C /* SpaceGrotesk-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		006C930F2D634EC5008F9D1C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				006C93102D634ECF008F9D1C /* ButtonView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,8 +357,10 @@
 				006C92F12D62A196008F9D1C /* TabBarView.swift in Sources */,
 				006C930A2D62A516008F9D1C /* CustomFonts.swift in Sources */,
 				006C92F32D62A1AF008F9D1C /* TabBarViewModel.swift in Sources */,
+				006C930E2D633DDE008F9D1C /* CompatabilityViewModel.swift in Sources */,
 				006C930C2D62A57D008F9D1C /* ColorExtension.swift in Sources */,
 				006C92C22D629F84008F9D1C /* AstrologyAppApp.swift in Sources */,
+				006C93112D634ECF008F9D1C /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

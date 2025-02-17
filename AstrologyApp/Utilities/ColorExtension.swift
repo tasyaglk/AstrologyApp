@@ -12,6 +12,9 @@ extension Color {
     static let purpleColor = Color.adaptive(light: "D9A8E4", dark: "D9A8E4")
     static let grayColor = Color.adaptive(light: "5C5C5C", dark: "5C5C5C")
     static let blackColor = Color.adaptive(light: "040404", dark: "040404")
+    static let backgroundColor = Color.adaptive(light: "0E0820", dark: "0E0820")
+    static let grayTextColor = Color.adaptive(light: "656366", dark: "656366")
+    static let buttonColor = Color.adaptive(light: "E89FE0", dark: "E89FE0")
 }
 
 extension Color {
