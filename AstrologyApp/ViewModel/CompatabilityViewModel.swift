@@ -9,9 +9,10 @@ import SwiftUI
 
 class CompatabilityViewModel: ObservableObject  {
     @Published var pairs: [String?] = []
+    @Published var isNextView: Bool = false
     
     func addPair() {
-        print("add")
+        isNextView.toggle()
     }
     
     func startCompatibility() {

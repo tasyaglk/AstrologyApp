@@ -14,7 +14,6 @@ struct CompatabilityView: View {
         VStack(spacing: 0) {
             if viewModel.pairs.count == 0 {
                 emptyCompatabilityView
-//                    .padding(.horizontal, 0)
             } else {
                 EmptyView()
             }
@@ -43,7 +42,7 @@ struct CompatabilityView: View {
             
             Text("Check Your Moon Compatibility")
                 .font(customFont: .spaceGroteskMedium, size: 18)
-                .foregroundColor(Color.white)
+                .foregroundColor(Color.whiteColor)
                 .padding(.horizontal)
                 .padding(.top, 22)
                 .kerning(0.7)
@@ -74,6 +73,14 @@ struct CompatabilityView: View {
             
             Spacer()
             
+            
+            NavigationLink(
+                destination: CompareTypeView(),
+                isActive: $viewModel.isNextView
+            ) {
+                EmptyView()
+            }
         }
+        .navigationBarHidden(true)
     }
 }
