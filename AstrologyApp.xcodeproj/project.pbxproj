@@ -32,6 +32,8 @@
 		006C930C2D62A57D008F9D1C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C930B2D62A57D008F9D1C /* ColorExtension.swift */; };
 		006C930E2D633DDE008F9D1C /* CompatabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C930D2D633DDE008F9D1C /* CompatabilityViewModel.swift */; };
 		006C93112D634ECF008F9D1C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C93102D634ECF008F9D1C /* ButtonView.swift */; };
+		0092B9DE2D67E3C500147E4F /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9DD2D67E3C500147E4F /* DatePickerView.swift */; };
+		0092B9E02D67E75500147E4F /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9DF2D67E75500147E4F /* TimePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		006C930B2D62A57D008F9D1C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		006C930D2D633DDE008F9D1C /* CompatabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatabilityViewModel.swift; sourceTree = "<group>"; };
 		006C93102D634ECF008F9D1C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		0092B9DD2D67E3C500147E4F /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		0092B9DF2D67E75500147E4F /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				006C93102D634ECF008F9D1C /* ButtonView.swift */,
+				0092B9DD2D67E3C500147E4F /* DatePickerView.swift */,
+				0092B9DF2D67E75500147E4F /* TimePickerView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -373,6 +379,8 @@
 				006C92F72D62A28B008F9D1C /* CompatabilityView.swift in Sources */,
 				006C92F52D62A213008F9D1C /* AnotherView.swift in Sources */,
 				006C92F12D62A196008F9D1C /* TabBarView.swift in Sources */,
+				0092B9DE2D67E3C500147E4F /* DatePickerView.swift in Sources */,
+				0092B9E02D67E75500147E4F /* TimePickerView.swift in Sources */,
 				006C930A2D62A516008F9D1C /* CustomFonts.swift in Sources */,
 				006C92F32D62A1AF008F9D1C /* TabBarViewModel.swift in Sources */,
 				006C930E2D633DDE008F9D1C /* CompatabilityViewModel.swift in Sources */,

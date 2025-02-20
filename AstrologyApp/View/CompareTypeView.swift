@@ -89,13 +89,15 @@ struct CompareTypeView: View {
             .padding(.top, 47)
             .padding(.horizontal, 16)
             
+            Spacer()
+            
             ButtonView(title: "Start Compatibility") {
                 viewModel.addPair()
             }
-            .padding(.top, 121)
+            .padding(.bottom, 168)
             .padding(.horizontal, 86)
             
-            Spacer()
+            
             
             NavigationLink(
                 destination: PersonsInfoView(),
