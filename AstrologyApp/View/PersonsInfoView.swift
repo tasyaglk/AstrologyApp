@@ -9,12 +9,8 @@ import SwiftUI
 
 struct PersonsInfoView: View {
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var viewModel = PersonsInfoViewModel()
-    
-    @State var name: String = ""
-    @State var dateOfBirth: Date = Date()
-    @State var timeOfBirth: Date = Date()
-    @State var city: String = ""
+    @ObservedObject var viewModel: PersonsInfoViewModel
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         VStack(spacing: 0) {
@@ -52,7 +48,7 @@ struct PersonsInfoView: View {
             .padding(.top, 30)
             
             VStack(spacing: 10) {
-                TextField("Your name", text: $name)
+                TextField("Your name", text: viewModel.numOfPage == 0 ? $viewModel.pairsInfo.firstName : $viewModel.pairsInfo.secondName)
                     .font(.custom("SpaceGrotesk-Medium", size: 14))
                     .foregroundColor(Color.whiteColor)
                     .padding(.leading, 16)
@@ -64,11 +60,11 @@ struct PersonsInfoView: View {
                         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     }
                 
-                DatePickerView(dateOfBirth: $dateOfBirth)
+                DatePickerView(dateOfBirth: viewModel.numOfPage == 0 ? $viewModel.pairsInfo.firstDateOfBirth : $viewModel.pairsInfo.secondDateOfBirth)
                 
-                TimePickerView(timeOfBirth: $timeOfBirth)
+                TimePickerView(timeOfBirth: viewModel.numOfPage == 0 ? $viewModel.pairsInfo.firstTimeOfBirth : $viewModel.pairsInfo.secondTimeOfBirth)
                 
-                TextField("Your place of birth", text: $city)
+                TextField("Your place of birth", text: viewModel.numOfPage == 0 ? $viewModel.pairsInfo.firstCityOfBirth : $viewModel.pairsInfo.secondCityOfBirth)
                     .font(.custom("SpaceGrotesk-Medium", size: 14))
                     .foregroundColor(Color.whiteColor)
                     .padding(.leading, 16)
@@ -88,13 +84,25 @@ struct PersonsInfoView: View {
             Spacer()
             
             ButtonView(title: viewModel.buttonTitle) {
+                if viewModel.numOfPage == 1 {
+                    viewModel.saveData(modelContext: modelContext)
+                    print(viewModel.pairsInfo.secondName)
+                }
                 viewModel.buttonPressed()
+                
             }
             .padding(.bottom, 168)
             .padding(.horizontal, 86)
             
         }
+        .onAppear {
+            viewModel.isNextView = false
+            print(viewModel.pairsInfo.typeOfRelation)
+        }
         .background(Color.backgroundColor)
         .navigationBarHidden(true)
     }
 }
+
+// TODO: -проверка на заполненные данные
+// проверить как именно доставать опред пару

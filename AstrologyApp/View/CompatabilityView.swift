@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CompatabilityView: View {
     @ObservedObject var viewModel = CompatabilityViewModel()
+    @StateObject var personsInfoViewModel = PersonsInfoViewModel()
     
     var body: some View {
         VStack(spacing: 0) {
@@ -75,7 +76,7 @@ struct CompatabilityView: View {
             
             
             NavigationLink(
-                destination: CompareTypeView(),
+                destination: CompareTypeView(viewModel: personsInfoViewModel),
                 isActive: $viewModel.isNextView
             ) {
                 EmptyView()

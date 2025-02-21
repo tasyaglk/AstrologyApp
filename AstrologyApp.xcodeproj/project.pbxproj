@@ -10,7 +10,6 @@
 		00338DE52D67A8FB0063F495 /* PersonsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00338DE42D67A8FB0063F495 /* PersonsInfoView.swift */; };
 		00338DE72D67A9040063F495 /* PersonsInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00338DE62D67A9040063F495 /* PersonsInfoViewModel.swift */; };
 		00338DE92D67ADD10063F495 /* CompareTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00338DE82D67ADD10063F495 /* CompareTypeView.swift */; };
-		00338DEB2D67ADD70063F495 /* CompareTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00338DEA2D67ADD70063F495 /* CompareTypeViewModel.swift */; };
 		00338DED2D67C4770063F495 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00338DEC2D67C4770063F495 /* TestView.swift */; };
 		006C92C22D629F84008F9D1C /* AstrologyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C92C12D629F84008F9D1C /* AstrologyAppApp.swift */; };
 		006C92C82D629F85008F9D1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006C92C72D629F85008F9D1C /* Assets.xcassets */; };
@@ -34,6 +33,7 @@
 		006C93112D634ECF008F9D1C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C93102D634ECF008F9D1C /* ButtonView.swift */; };
 		0092B9DE2D67E3C500147E4F /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9DD2D67E3C500147E4F /* DatePickerView.swift */; };
 		0092B9E02D67E75500147E4F /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9DF2D67E75500147E4F /* TimePickerView.swift */; };
+		0092B9E22D687CD800147E4F /* PairsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9E12D687CD800147E4F /* PairsInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		00338DE42D67A8FB0063F495 /* PersonsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsInfoView.swift; sourceTree = "<group>"; };
 		00338DE62D67A9040063F495 /* PersonsInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsInfoViewModel.swift; sourceTree = "<group>"; };
 		00338DE82D67ADD10063F495 /* CompareTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareTypeView.swift; sourceTree = "<group>"; };
-		00338DEA2D67ADD70063F495 /* CompareTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareTypeViewModel.swift; sourceTree = "<group>"; };
 		00338DEC2D67C4770063F495 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		006C92BE2D629F84008F9D1C /* AstrologyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstrologyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006C92C12D629F84008F9D1C /* AstrologyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstrologyAppApp.swift; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		006C93102D634ECF008F9D1C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		0092B9DD2D67E3C500147E4F /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		0092B9DF2D67E75500147E4F /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		0092B9E12D687CD800147E4F /* PairsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +192,6 @@
 				006C92F22D62A1AF008F9D1C /* TabBarViewModel.swift */,
 				006C930D2D633DDE008F9D1C /* CompatabilityViewModel.swift */,
 				00338DE62D67A9040063F495 /* PersonsInfoViewModel.swift */,
-				00338DEA2D67ADD70063F495 /* CompareTypeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -200,6 +199,7 @@
 		006C92EF2D62A18C008F9D1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0092B9E12D687CD800147E4F /* PairsInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0092B9E22D687CD800147E4F /* PairsInfo.swift in Sources */,
 				00338DED2D67C4770063F495 /* TestView.swift in Sources */,
 				00338DE92D67ADD10063F495 /* CompareTypeView.swift in Sources */,
 				00338DE72D67A9040063F495 /* PersonsInfoViewModel.swift in Sources */,
@@ -388,7 +389,6 @@
 				006C92C22D629F84008F9D1C /* AstrologyAppApp.swift in Sources */,
 				006C93112D634ECF008F9D1C /* ButtonView.swift in Sources */,
 				00338DE52D67A8FB0063F495 /* PersonsInfoView.swift in Sources */,
-				00338DEB2D67ADD70063F495 /* CompareTypeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

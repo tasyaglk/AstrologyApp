@@ -8,10 +8,22 @@
 import SwiftUI
 
 struct CompareTypeView: View {
-    @ObservedObject var viewModel = CompareTypeViewModel()
+    @ObservedObject var viewModel: PersonsInfoViewModel
     @Environment(\.dismiss) var dismiss
     @State private var selectedOption: String = "Love"
-    let options = ["Love", "Friendship", "Work"]
+    
+    
+    @State private var pairsInfo = PairsInfo(
+            typeOfRelation: "",
+            firstName: "",
+            firstDateOfBirth: Date(),
+            firstTimeOfBirth: Date(),
+            firstCityOfBirth: "",
+            secondName: "",
+            secondDateOfBirth: Date(),
+            secondTimeOfBirth: Date(),
+            secondCityOfBirth: ""
+        )
     
     var body: some View {
         VStack(spacing: 0) {
@@ -56,9 +68,9 @@ struct CompareTypeView: View {
             .padding(.horizontal, 16)
             
             VStack(spacing: 12) {
-                ForEach(options, id: \.self) { option in
+                ForEach(viewModel.options, id: \.self) { option in
                     HStack(spacing: 0) {
-                        Image(selectedOption == option ? "fillOption" : "emptyOption")
+                        Image(viewModel.selectedOption == option ? "fillOption" : "emptyOption")
                             .padding(.leading, 16)
                             .padding(.top, 16)
                             .padding(.bottom, 16)
@@ -82,7 +94,7 @@ struct CompareTypeView: View {
                         )
                     )
                     .onTapGesture {
-                        selectedOption = option
+                        viewModel.selectOption(option)
                     }
                 }
             }
@@ -100,7 +112,7 @@ struct CompareTypeView: View {
             
             
             NavigationLink(
-                destination: PersonsInfoView(),
+                destination: PersonsInfoView(viewModel: viewModel),
                 isActive: $viewModel.isNextView
             ) {
                 EmptyView()
