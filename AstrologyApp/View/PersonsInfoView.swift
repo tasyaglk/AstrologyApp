@@ -12,6 +12,8 @@ struct PersonsInfoView: View {
     @ObservedObject var viewModel: PersonsInfoViewModel
     @Environment(\.modelContext) private var modelContext
     
+    //    @ObservedObject private var completerDelegate = SearchCompleterDelegate()
+    
     var body: some View {
         VStack(spacing: 0) {
             
@@ -64,6 +66,7 @@ struct PersonsInfoView: View {
                 
                 TimePickerView(timeOfBirth: viewModel.numOfPage == 0 ? $viewModel.pairsInfo.firstTimeOfBirth : $viewModel.pairsInfo.secondTimeOfBirth)
                 
+                
                 TextField("Your place of birth", text: viewModel.numOfPage == 0 ? $viewModel.pairsInfo.firstCityOfBirth : $viewModel.pairsInfo.secondCityOfBirth)
                     .font(.custom("SpaceGrotesk-Medium", size: 14))
                     .foregroundColor(Color.whiteColor)
@@ -72,11 +75,26 @@ struct PersonsInfoView: View {
                     .padding(.bottom, 12)
                     .background(Color.rowBackgroundColor)
                     .cornerRadius(7)
-                    .onTapGesture {
-                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                    }
+                    .onChange(of: viewModel.numOfPage == 0 ? viewModel.pairsInfo.firstCityOfBirth : viewModel.pairsInfo.secondCityOfBirth, { _, newValue in
+                        viewModel.performSearch(query: newValue)
+                    })
                 
-                    
+                if !viewModel.searchResults.isEmpty {
+                    List(viewModel.searchResults) { location in
+                        Text(location.locationText())
+                            .font(.custom("SpaceGrotesk-Medium", size: 14))
+                            .background(Color.rowBackgroundColor)
+                            .foregroundColor(Color.whiteColor)
+                            .onTapGesture {
+                                let selectedCity = location.locationText()
+                                viewModel.selectCity(selectedCity)
+                            }
+                    }
+                    .frame(height: 200)
+                    .scrollContentBackground(.hidden)
+                    .background(Color.clear)
+                    .animation(.easeInOut, value: viewModel.searchResults)
+                }
             }
             .padding(.horizontal, 30)
             .padding(.top, 30)
@@ -86,7 +104,7 @@ struct PersonsInfoView: View {
             ButtonView(title: viewModel.buttonTitle) {
                 if viewModel.numOfPage == 1 {
                     viewModel.saveData(modelContext: modelContext)
-                    print(viewModel.pairsInfo.secondName)
+                    print(viewModel.pairsInfo.secondCityOfBirth)
                 }
                 viewModel.buttonPressed()
                 
@@ -100,9 +118,14 @@ struct PersonsInfoView: View {
             print(viewModel.pairsInfo.typeOfRelation)
         }
         .background(Color.backgroundColor)
+        .alert("Error", isPresented: $viewModel.showAlert) {
+            Button("ok", role: .cancel) {}
+        } message: {
+            Text("You have to add all information")
+        }
         .navigationBarHidden(true)
     }
 }
 
-// TODO: -проверка на заполненные данные
+
 // проверить как именно доставать опред пару

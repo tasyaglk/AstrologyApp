@@ -34,6 +34,7 @@
 		0092B9DE2D67E3C500147E4F /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9DD2D67E3C500147E4F /* DatePickerView.swift */; };
 		0092B9E02D67E75500147E4F /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9DF2D67E75500147E4F /* TimePickerView.swift */; };
 		0092B9E22D687CD800147E4F /* PairsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9E12D687CD800147E4F /* PairsInfo.swift */; };
+		0092B9E42D6BC8CA00147E4F /* SimpleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9E32D6BC8CA00147E4F /* SimpleLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		0092B9DD2D67E3C500147E4F /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		0092B9DF2D67E75500147E4F /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		0092B9E12D687CD800147E4F /* PairsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsInfo.swift; sourceTree = "<group>"; };
+		0092B9E32D6BC8CA00147E4F /* SimpleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0092B9E12D687CD800147E4F /* PairsInfo.swift */,
+				0092B9E32D6BC8CA00147E4F /* SimpleLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				00338DED2D67C4770063F495 /* TestView.swift in Sources */,
 				00338DE92D67ADD10063F495 /* CompareTypeView.swift in Sources */,
 				00338DE72D67A9040063F495 /* PersonsInfoViewModel.swift in Sources */,
+				0092B9E42D6BC8CA00147E4F /* SimpleLocation.swift in Sources */,
 				006C92F72D62A28B008F9D1C /* CompatabilityView.swift in Sources */,
 				006C92F52D62A213008F9D1C /* AnotherView.swift in Sources */,
 				006C92F12D62A196008F9D1C /* TabBarView.swift in Sources */,
