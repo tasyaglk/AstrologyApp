@@ -7,15 +7,31 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct PairsView: View {
     var buttonClicked: (() -> Void)?
-    var pairsInfo: PairsInfo
     var percentage: String = "74%"
-    @StateObject private var viewModel = PairsViewModel()
-
+    @StateObject private var viewModel: PairsViewModel
+    
+    init(buttonClicked: (() -> Void)? = nil, pairsInfo: PairsInfo, percentage: String = "74%") {
+        self.buttonClicked = buttonClicked
+        self.percentage = percentage
+        _viewModel = StateObject(wrappedValue: PairsViewModel(pairsInfo: pairsInfo))
+    }
+    
     var body: some View {
+        Button(action: {
+            buttonClicked?()
+        }, label: {
+            cardsView
+        })
+    }
+    
+    private var cardsView: some View {
         ZStack {
             Image("cardBackground")
+                .resizable()
                 .aspectRatio(contentMode: .fit)
             
             VStack(spacing: 0) {
@@ -28,7 +44,7 @@ struct PairsView: View {
                         .background(Color.buttonColor)
                         .cornerRadius(600)
                     
-                    Image(pairsInfo.typeOfRelation)
+                    Image(viewModel.pairsInfo.typeOfRelation)
                         .padding(.leading, 3)
                         .aspectRatio(contentMode: .fill)
                     
@@ -38,7 +54,7 @@ struct PairsView: View {
                 .padding(.top, 10)
                 
                 HStack(spacing: 0) {
-                    Text(pairsInfo.firstName + " & " + pairsInfo.secondName)
+                    Text(viewModel.pairsInfo.firstName + " & " + viewModel.pairsInfo.secondName)
                         .font(customFont: .spaceGroteskMedium, size: 23)
                         .foregroundStyle(Color.whiteColor)
                     
@@ -54,12 +70,12 @@ struct PairsView: View {
                     Spacer()
                     
                     HStack(spacing: 0) {
-                        Text(viewModel.signOfPerson(dateOfBirth: pairsInfo.firstDateOfBirth))
+                        Text(viewModel.signOfPerson(personsNum: 1))
                             .font(customFont: .spaceGroteskRegular, size: 12)
                             .foregroundStyle(Color.whiteColor)
                             .padding(.leading, 18)
                         
-                        Image(viewModel.signOfPerson(dateOfBirth: pairsInfo.firstDateOfBirth))
+                        Image(viewModel.signOfPerson(personsNum: 1))
                             .frame(width: 16, height: 16)
                             .padding(.leading, 2)
                             .padding(.trailing, 18)
@@ -70,12 +86,12 @@ struct PairsView: View {
                     )
                     
                     HStack(spacing: 0) {
-                        Text(viewModel.signOfPerson(dateOfBirth: pairsInfo.secondDateOfBirth))
+                        Text(viewModel.signOfPerson(personsNum: 2))
                             .font(customFont: .spaceGroteskRegular, size: 12)
                             .foregroundStyle(Color.whiteColor)
                             .padding(.leading, 18)
                         
-                        Image(viewModel.signOfPerson(dateOfBirth: pairsInfo.secondDateOfBirth))
+                        Image(viewModel.signOfPerson(personsNum: 2))
                             .frame(width: 16, height: 16)
                             .padding(.leading, 2)
                             .padding(.trailing, 18)
@@ -86,21 +102,9 @@ struct PairsView: View {
                     )
                 }
                 .padding(.horizontal, 12)
-                .padding(.top, 20)
-//                .padding(.bottom, 16)
+                .padding(.top, 16)
+                .padding(.bottom, 11)
             }
-            
-//            Spacer()
         }
-//        .background(Image("cardBackground")
-//            .aspectRatio(contentMode: .fit))
-        
-        Spacer()
     }
-        
-    
-}
-
-#Preview {
-    PairsView(buttonClicked: {}, pairsInfo: PairsInfo(typeOfRelation: "Love", firstName: "1", firstDateOfBirth: Date(), firstTimeOfBirth: Date(), firstCityOfBirth: "1", secondName: "1", secondDateOfBirth: Date(), secondTimeOfBirth: Date(), secondCityOfBirth: "1"), percentage: "84%")
 }

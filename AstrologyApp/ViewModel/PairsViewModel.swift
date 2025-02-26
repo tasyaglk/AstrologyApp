@@ -8,8 +8,16 @@
 import SwiftUI
 
 class PairsViewModel: ObservableObject {
+    @Published var pairsInfo: PairsInfo
+        
+    init(pairsInfo: PairsInfo) {
+        self.pairsInfo = pairsInfo
+    }
     
-    func signOfPerson(dateOfBirth: Date) -> String {
+    func signOfPerson(personsNum: Int) -> String {
+        
+        let dateOfBirth = personsNum == 1 ? pairsInfo.firstDateOfBirth : pairsInfo.secondDateOfBirth
+        
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day, .month], from: dateOfBirth)
         

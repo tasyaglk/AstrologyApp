@@ -90,14 +90,6 @@ struct CompatabilityView: View {
             .padding(.top, 36)
             
             Spacer()
-            
-            
-//            NavigationLink(
-//                destination: CompareTypeView(viewModel: personsInfoViewModel),
-//                isActive: $viewModel.isNextView
-//            ) {
-//                EmptyView()
-//            }
         }
         .navigationBarHidden(true)
     }
@@ -121,11 +113,11 @@ struct CompatabilityView: View {
             ScrollView {
                 VStack(spacing: 8) {
                     ForEach(viewModel.pairs, id: \.id) { pair in
-                        PairsView(pairsInfo: pair)
-//                            .padding(.horizontal, 30)
+                        PairsView(pairsInfo: pair) 
                     }
                 }
             }
+            .scrollIndicators(.hidden)
             .padding(.top, 30)
             .padding(.bottom, 50)
             .padding(.horizontal, 30)
