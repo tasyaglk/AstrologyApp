@@ -17,6 +17,7 @@ extension Color {
     static let buttonColor = Color.adaptive(light: "E89FE0", dark: "E89FE0")
     static let whiteColor = Color.adaptive(light: "FCFCFC", dark: "FCFCFC")
     static let rowBackgroundColor = Color.adaptive(light: "251E38", dark: "251E38")
+    static let astroSignBackgroundColor = Color.adaptive(light: "0C051F", dark: "0C051F")
 }
 
 extension Color {

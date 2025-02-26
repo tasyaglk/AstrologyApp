@@ -6,22 +6,39 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct CompatabilityView: View {
-    @ObservedObject var viewModel = CompatabilityViewModel()
+    @Environment(\.modelContext) private var modelContext
+    @StateObject private var viewModel = CompatabilityViewModel()
+
+    
     @StateObject var personsInfoViewModel = PersonsInfoViewModel()
+
     
     var body: some View {
         VStack(spacing: 0) {
             if viewModel.pairs.count == 0 {
+                
                 emptyCompatabilityView
             } else {
+                fullCompatabilityView
+            }
+            
+            NavigationLink(
+                destination: CompareTypeView(viewModel: personsInfoViewModel),
+                isActive: $viewModel.isNextView
+            ) {
                 EmptyView()
             }
         }
+        .navigationBarHidden(true)
+        .onAppear {
+            viewModel.setModelContext(modelContext)
+        }
         .background(Color.backgroundColor)
     }
-        
+    
     
     private var emptyCompatabilityView: some View {
         VStack(spacing: 0) {
@@ -75,13 +92,44 @@ struct CompatabilityView: View {
             Spacer()
             
             
-            NavigationLink(
-                destination: CompareTypeView(viewModel: personsInfoViewModel),
-                isActive: $viewModel.isNextView
-            ) {
-                EmptyView()
-            }
+//            NavigationLink(
+//                destination: CompareTypeView(viewModel: personsInfoViewModel),
+//                isActive: $viewModel.isNextView
+//            ) {
+//                EmptyView()
+//            }
         }
         .navigationBarHidden(true)
+    }
+    
+    private var fullCompatabilityView: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                Text("Compatability")
+                    .font(customFont: .spaceGroteskMedium, size: 18)
+                    .foregroundColor(Color.whiteColor)
+                
+                Spacer()
+                
+                Button(action: viewModel.addPair) {
+                    Image("addFullButton")
+                }
+            }
+            .padding(.horizontal, 30)
+            .padding(.top, 21)
+            
+            ScrollView {
+                VStack(spacing: 8) {
+                    ForEach(viewModel.pairs, id: \.id) { pair in
+                        PairsView(pairsInfo: pair)
+//                            .padding(.horizontal, 30)
+                    }
+                }
+            }
+            .padding(.top, 30)
+            .padding(.bottom, 50)
+            .padding(.horizontal, 30)
+
+        }
     }
 }

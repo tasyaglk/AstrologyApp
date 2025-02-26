@@ -35,6 +35,8 @@
 		0092B9E02D67E75500147E4F /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9DF2D67E75500147E4F /* TimePickerView.swift */; };
 		0092B9E22D687CD800147E4F /* PairsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9E12D687CD800147E4F /* PairsInfo.swift */; };
 		0092B9E42D6BC8CA00147E4F /* SimpleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9E32D6BC8CA00147E4F /* SimpleLocation.swift */; };
+		0092B9E62D6C6C7F00147E4F /* PairsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9E52D6C6C7F00147E4F /* PairsView.swift */; };
+		0092B9E82D6EAE5E00147E4F /* PairsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092B9E72D6EAE5E00147E4F /* PairsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		0092B9DF2D67E75500147E4F /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		0092B9E12D687CD800147E4F /* PairsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsInfo.swift; sourceTree = "<group>"; };
 		0092B9E32D6BC8CA00147E4F /* SimpleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLocation.swift; sourceTree = "<group>"; };
+		0092B9E52D6C6C7F00147E4F /* PairsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsView.swift; sourceTree = "<group>"; };
+		0092B9E72D6EAE5E00147E4F /* PairsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,7 @@
 				006C92F22D62A1AF008F9D1C /* TabBarViewModel.swift */,
 				006C930D2D633DDE008F9D1C /* CompatabilityViewModel.swift */,
 				00338DE62D67A9040063F495 /* PersonsInfoViewModel.swift */,
+				0092B9E72D6EAE5E00147E4F /* PairsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				006C93102D634ECF008F9D1C /* ButtonView.swift */,
 				0092B9DD2D67E3C500147E4F /* DatePickerView.swift */,
 				0092B9DF2D67E75500147E4F /* TimePickerView.swift */,
+				0092B9E52D6C6C7F00147E4F /* PairsView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -392,7 +398,9 @@
 				006C930C2D62A57D008F9D1C /* ColorExtension.swift in Sources */,
 				006C92C22D629F84008F9D1C /* AstrologyAppApp.swift in Sources */,
 				006C93112D634ECF008F9D1C /* ButtonView.swift in Sources */,
+				0092B9E62D6C6C7F00147E4F /* PairsView.swift in Sources */,
 				00338DE52D67A8FB0063F495 /* PersonsInfoView.swift in Sources */,
+				0092B9E82D6EAE5E00147E4F /* PairsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

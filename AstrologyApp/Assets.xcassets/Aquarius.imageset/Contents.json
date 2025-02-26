@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "fluent-emoji-flat_aquarius.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "fluent-emoji-flat_aquarius 1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "fluent-emoji-flat_aquarius 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

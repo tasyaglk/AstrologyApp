@@ -9,6 +9,7 @@ import SwiftUI
 
 enum CustomFonts: String {
     case spaceGroteskMedium = "SpaceGrotesk-Medium"
+    case spaceGroteskRegular = "SpaceGrotesk-Regular"
 }
 
 extension Font {

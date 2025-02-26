@@ -9,14 +9,6 @@ import SwiftUI
 import SwiftData
 import MapKit
 
-//class SearchCompleterDelegate: NSObject, ObservableObject, MKLocalSearchCompleterDelegate {
-//    @Published var searchResults: [MKLocalSearchCompletion] = []
-//
-//    func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
-//        searchResults = completer.results
-//    }
-//}
-
 class PersonsInfoViewModel: NSObject, ObservableObject {
     @Published var numOfPerson: String = "First Person"
     @Published var buttonTitle: String = "Next Person"
@@ -69,13 +61,13 @@ class PersonsInfoViewModel: NSObject, ObservableObject {
         if numOfPage == 0 {
             return !pairsInfo.firstName.isEmpty &&
             !pairsInfo.firstCityOfBirth.isEmpty &&
-            pairsInfo.firstDateOfBirth != Date() &&
-            pairsInfo.firstTimeOfBirth != Date()
+            pairsInfo.firstDateOfBirth < Date() &&
+            pairsInfo.firstTimeOfBirth < Date()
         } else {
             return !pairsInfo.secondName.isEmpty &&
             !pairsInfo.secondCityOfBirth.isEmpty &&
-            pairsInfo.secondDateOfBirth != Date() &&
-            pairsInfo.secondTimeOfBirth != Date()
+            pairsInfo.secondDateOfBirth < Date() &&
+            pairsInfo.secondTimeOfBirth < Date()
         }
     }
     

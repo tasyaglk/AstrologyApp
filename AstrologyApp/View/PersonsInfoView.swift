@@ -112,6 +112,13 @@ struct PersonsInfoView: View {
             .padding(.bottom, 168)
             .padding(.horizontal, 86)
             
+            NavigationLink(
+                destination: CompatabilityView(),
+                isActive: $viewModel.isNextView
+            ) {
+                EmptyView()
+            }
+            
         }
         .onAppear {
             viewModel.isNextView = false
@@ -121,7 +128,7 @@ struct PersonsInfoView: View {
         .alert("Error", isPresented: $viewModel.showAlert) {
             Button("ok", role: .cancel) {}
         } message: {
-            Text("You have to add all information")
+            Text("You have to add all information correctly")
         }
         .navigationBarHidden(true)
     }

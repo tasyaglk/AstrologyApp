@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "fluent-emoji-flat_pisces.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "fluent-emoji-flat_pisces 1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "fluent-emoji-flat_pisces 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
