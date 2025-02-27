@@ -51,6 +51,7 @@ class PersonsInfoViewModel: NSObject, ObservableObject {
         if numOfPage == 0 {
             numOfPerson = "Second Person"
             buttonTitle = "Create Compatibility"
+            searchResults = []
             numOfPage = 1
         } else {
             isNextView.toggle()
@@ -61,13 +62,11 @@ class PersonsInfoViewModel: NSObject, ObservableObject {
         if numOfPage == 0 {
             return !pairsInfo.firstName.isEmpty &&
             !pairsInfo.firstCityOfBirth.isEmpty &&
-            pairsInfo.firstDateOfBirth < Date() &&
-            pairsInfo.firstTimeOfBirth < Date()
+            pairsInfo.firstDateOfBirth < Date()
         } else {
             return !pairsInfo.secondName.isEmpty &&
             !pairsInfo.secondCityOfBirth.isEmpty &&
-            pairsInfo.secondDateOfBirth < Date() &&
-            pairsInfo.secondTimeOfBirth < Date()
+            pairsInfo.secondDateOfBirth < Date() 
         }
     }
     
