@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 class PairsViewModel: ObservableObject {
     @Published var pairsInfo: PairsInfo
-        
+    
     init(pairsInfo: PairsInfo) {
         self.pairsInfo = pairsInfo
     }
@@ -39,6 +40,6 @@ class PairsViewModel: ObservableObject {
         default: return "Unknown sign"
         }
     }
-    
+
     
 }

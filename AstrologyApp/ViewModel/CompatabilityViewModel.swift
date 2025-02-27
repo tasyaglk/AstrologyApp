@@ -20,19 +20,19 @@ class CompatabilityViewModel: ObservableObject {
         fetchPairs()
     }
     
-    private func fetchPairs() {
-            guard let modelContext = modelContext else {
-                print("ModelContext не установлен")
-                return
-            }
-            
-            do {
-                let descriptor = FetchDescriptor<PairsInfo>()
-                pairs = try modelContext.fetch(descriptor)
-            } catch {
-                print("Ошибка загрузки данных:", error.localizedDescription)
-            }
+    func fetchPairs() {
+        guard let modelContext = modelContext else {
+            print("ModelContext не установлен")
+            return
         }
+        
+        do {
+            let descriptor = FetchDescriptor<PairsInfo>()
+            pairs = try modelContext.fetch(descriptor)
+        } catch {
+            print("Ошибка загрузки данных:", error.localizedDescription)
+        }
+    }
     
     func addPair() {
         isNextView.toggle()
@@ -40,5 +40,20 @@ class CompatabilityViewModel: ObservableObject {
     
     func startCompatibility() {
         print("Список пар:", pairs.map { $0.secondName })
+    }
+    
+    func deletePair(pairs: PairsInfo) {
+        guard let modelContext = modelContext else {
+            print("ModelContext не установлен")
+            return
+        }
+        
+        modelContext.delete(pairs)
+        do {
+            try modelContext.save()
+        } catch {
+            print("Error saving context: \(error)")
+        }
+        fetchPairs()
     }
 }

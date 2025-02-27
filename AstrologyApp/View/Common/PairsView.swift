@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-import SwiftUI
+import SwiftData
 
 struct PairsView: View {
+    @Environment(\.modelContext) private var modelContext
     var buttonClicked: (() -> Void)?
     var percentage: String = "74%"
     @StateObject private var viewModel: PairsViewModel
@@ -21,11 +22,13 @@ struct PairsView: View {
     }
     
     var body: some View {
-        Button(action: {
-            buttonClicked?()
-        }, label: {
-            cardsView
-        })
+        //        Button(action: {
+        //            buttonClicked?()
+        //        }, label: {
+        //            cardsView
+        //                
+        //        })
+        cardsView
     }
     
     private var cardsView: some View {
@@ -106,5 +109,6 @@ struct PairsView: View {
                 .padding(.bottom, 11)
             }
         }
+        
     }
 }

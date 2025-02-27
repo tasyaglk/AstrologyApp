@@ -11,10 +11,10 @@ import SwiftData
 struct CompatabilityView: View {
     @Environment(\.modelContext) private var modelContext
     @StateObject private var viewModel = CompatabilityViewModel()
-
+    
     
     @StateObject var personsInfoViewModel = PersonsInfoViewModel()
-
+    
     
     var body: some View {
         VStack(spacing: 0) {
@@ -113,15 +113,24 @@ struct CompatabilityView: View {
             ScrollView {
                 VStack(spacing: 8) {
                     ForEach(viewModel.pairs, id: \.id) { pair in
-                        PairsView(pairsInfo: pair) 
+                        PairsView(pairsInfo: pair)
+                            .contextMenu {
+                                Button(role: .destructive) {
+                                    viewModel.deletePair(pairs: pair)
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
+                            }
                     }
+                    
+                    
                 }
             }
             .scrollIndicators(.hidden)
             .padding(.top, 30)
             .padding(.bottom, 50)
             .padding(.horizontal, 30)
-
+            
         }
     }
 }
